@@ -111,7 +111,7 @@ function App() {
       <div style={{"display":"flex","overflow":"auto","paddingLeft":"0.75rem","paddingTop":"1rem","backgroundColor":"#F3F4F6", height: 'calc(100vh - 60px)' }}>
 
         {sections.map((section) => (
-          <div style={{"display":"flex",width: "20%", flexDirection:"column" ,"paddingLeft":"0.75rem","paddingTop":"1.5rem","backgroundColor":"#F3F4F6"}} key={section}>
+          <div style={{"display":"flex",width: "20%",minWidth: "250px", flexDirection:"column" ,"paddingLeft":"0.75rem","paddingTop":"1.5rem","backgroundColor":"#F3F4F6"}} key={section}>
             <ColumnTitle group={group}  title={group == "user" ? findNameById(section) : (group == "priority" ? priorityMap[section] : section)} length={data[section].length} />
             {data[section].map((task) => (
               <Card group={group} status={task.status} priority={task.priority} tags={task.tag} id={task.id} title={task.title}></Card>
